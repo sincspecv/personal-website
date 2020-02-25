@@ -1,3 +1,9 @@
 .banner .nav li {
   @extend .navbar-item;
 }
+
+.brand {
+  @extend %heading;
+
+  font-size: $normal;
+}

@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+  font-size: calc(14px + 4 * ((100vw - 320px) / 960));
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+  font-family: "Open Sans", sans-serif;
+  color: $black;
+}
+
+h1 {
+  @extend %heading;
+
+  font-size: $jumbo;
+}
+
+h2 {
+  @extend %heading;
+
+  font-size: $xx-large;
+}
+
+h3 {
+  @extend %heading;
+
+  font-size: $x-large;
+}
+
+h4 {
+  font-size: $large;
+}
+
+h5 {
+  font-size: $normal;
+}
+
+h6 {
+  font-size: $small;
+}

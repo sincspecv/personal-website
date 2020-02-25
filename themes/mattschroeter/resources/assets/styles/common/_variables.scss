@@ -1,6 +1,28 @@
 /** Colors */
-$primary:               #525ddc;
+$primary:               #274595;
+$light:                 #46b4e8;
+$dark:                  #0e1d44;
+$black:                 #030303;
+$white:                 #f5f7f9;
+$grey:                  #e3e3e3;
 $link:                  $primary;
 
 /** Box Model  */
 $spacer:                2rem;
+
+/** Type Scale Sizing **/
+$x-jumbo: 2.488rem;
+$jumbo: 2.047rem;
+$xx-large: 1.728rem;
+$x-large: 1.44rem;
+$large: 1.2rem;
+$normal: 1rem;
+$small: 0.833rem;
+$x-small: 0.694rem;
+$xx-small: 0.579rem;
+
+/** Placehoders **/
+%heading {
+  font-family: "Abril Fatface", serif;
+  letter-spacing: 1.2pt;
+}

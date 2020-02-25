@@ -2,7 +2,11 @@
   <div class="container">
     <div class="navbar">
       <div class="navbar-brand">
-        <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+        @if(is_front_page())
+          <h1><a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a></h1>
+        @else
+          <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+        @endif
       </div>
       <div class="nav-primary navbar-menu">
         @if (has_nav_menu('primary_navigation'))
