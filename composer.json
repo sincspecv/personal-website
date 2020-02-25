@@ -18,6 +18,10 @@
     {
       "type": "vcs",
       "url": "git@github.com:sincspecv/acf-pro.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:littlebizzy/speed-demon.git"
     }
   ],
   "extra": {
@@ -35,6 +39,7 @@
     "wpackagist-plugin/wordpress-seo": "13.1.*",
     "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "2.3.*",
     "sincspecv/wp-acf-to-post": "0.1.0",
-    "sincspecv/acf-pro": "5.8.7"
+    "sincspecv/acf-pro": "5.8.7",
+    "littlebizzy/speed-demon": "1.4.0"
   }
 }
