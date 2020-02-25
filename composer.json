@@ -1,0 +1,35 @@
+{
+  "name": "sincspecv/personal-website",
+  "authors": [
+    {
+      "name": "Matt Schroeter",
+      "email": "matt@thefancyrobot.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:sincspecv/WP-ACF-To-Post.git"
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "wpackagist-plugin/wordpress-seo": "13.1.*",
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "2.3.*",
+    "sincspecv/wp-acf-to-post": "0.1.0"
+  }
+}

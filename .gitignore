@@ -7,6 +7,11 @@ themes/mattschroeter/vendor
 themes/mattschroeter/resources/assets/config-local.json
 
 /plugins
+!plugins/advanced-custom-fields-pro
+
+composer.lock
+/uploads
+/vendor
 
 .DS_Store
 debug.log
