@@ -1,0 +1,59 @@
+.cascading-services {
+  .service {
+    .column {
+      position: relative;
+      max-width: calc(100% - 2.5rem);
+      border-radius: 8px;
+      box-shadow: 2px 2px 4px 1px rgba($black, 0.25);
+      padding: 0;
+      margin: 2.5rem 0 2.5rem 2.5rem;
+      background-color: $pure-white;
+    }
+
+    &__icon {
+      width: 5rem;
+      height: 5rem;
+      background-color: $dark;
+      border-radius: 5rem;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        path {
+          fill: $light;
+        }
+      }
+
+      @media all and (max-width: 768px) {
+        left: 50%;
+      }
+    }
+
+    &__content {
+      padding: 2.5rem;
+
+      &-link {
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: $light;
+        margin-top: $xx-small;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: $primary-brand;
+        }
+      }
+    }
+  }
+}

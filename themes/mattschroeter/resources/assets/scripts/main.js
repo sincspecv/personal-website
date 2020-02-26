@@ -10,6 +10,9 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 
+// Fontawesome 5
+import '@fortawesome/fontawesome-pro/js/all.js'
+
 /** Populate Router instance with DOM routes */
 const routes = new Router({
   // All pages

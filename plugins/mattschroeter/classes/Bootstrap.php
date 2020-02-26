@@ -5,6 +5,7 @@ namespace MS;
 
 
 use MS\ACF\Groups\Page;
+use MS\ACF\Layouts\CascadingServices;
 use MS\ACF\Layouts\Hero;
 use MS\ACF\Layouts\OneLineCTA;
 use MS\ACF\Repeaters\Modules;
@@ -51,6 +52,7 @@ class Bootstrap {
 			return [
 				Hero::class,
 				OneLineCTA::class,
+				CascadingServices::class,
 			];
 		});
 	}
