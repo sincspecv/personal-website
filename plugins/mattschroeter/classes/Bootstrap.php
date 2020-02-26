@@ -4,6 +4,10 @@
 namespace MS;
 
 
+use MS\ACF\Groups\Page;
+use MS\ACF\Layouts\Hero;
+use MS\ACF\Repeaters\Modules;
+
 class Bootstrap {
 	public static function init() {
 		self::hooks();
@@ -25,6 +29,27 @@ class Bootstrap {
 		// Move Yoast to the bottom of the edit screen
 		add_filter( 'wpseo_metabox_prio', function() {
 			return 'low';
+		});
+
+		// ACF Groups
+		add_filter( 'acf_to_post/init/groups', function() {
+			return [
+				Page::class,
+			];
+		});
+
+		// ACF Repeater Fields
+		add_filter( 'acf_to_post/init/fields', function() {
+			return [
+				Modules::class,
+			];
+		});
+
+		// ACF Layouts
+		add_filter( 'acf_to_post/init/layouts', function() {
+			return [
+				Hero::class,
+			];
 		});
 	}
 

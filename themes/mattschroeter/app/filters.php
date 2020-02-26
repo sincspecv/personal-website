@@ -89,3 +89,8 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+/**
+ * Start ACF get_row_index() at 0
+ */
+add_filter('acf/settings/row_index_offset', '__return_zero');

@@ -7,6 +7,10 @@ $white:                 #f5f7f9;
 $grey:                  #e3e3e3;
 $link:                  $primary;
 
+/** Fonts **/
+$primary-font: "Open Sans", sans-serif;
+$secondary-font: "Abril Fatface", serif;
+
 /** Box Model  */
 $spacer:                2rem;
 
@@ -23,6 +27,6 @@ $xx-small: 0.579rem;
 
 /** Placehoders **/
 %heading {
-  font-family: "Abril Fatface", serif;
+  font-family: $secondary-font;
   letter-spacing: 1.2pt;
 }

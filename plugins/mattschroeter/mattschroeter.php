@@ -10,3 +10,8 @@ Text Domain: tfr
 Domain Path: /lang
 */
 
+namespace MS;
+
+require_once dirname(__FILE__) . '/autoload.php';
+
+$GLOBALS['site'] = new Plugin();

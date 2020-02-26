@@ -23,6 +23,6 @@ class Plugin {
 	}
 
 	private function setVariables() {
-		$this->path = dir(__FILE__);
+		$this->path = dirname(__FILE__);
 	}
 }
