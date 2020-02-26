@@ -17,34 +17,41 @@ body {
   background-color: $white;
   font-family: $primary-font;
   color: $black;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+h1,
+.h1 {
   @extend %heading;
 
   font-size: $jumbo;
 }
 
-h2 {
+h2,
+.h2 {
   @extend %heading;
 
   font-size: $xx-large;
 }
 
-h3 {
+h3,
+.h3 {
   @extend %heading;
 
   font-size: $x-large;
 }
 
-h4 {
+h4,
+.h4 {
   font-size: $large;
 }
 
-h5 {
+h5,
+.h5 {
   font-size: $normal;
 }
 
-h6 {
+h6,
+.h6 {
   font-size: $small;
 }

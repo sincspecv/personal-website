@@ -6,6 +6,7 @@ namespace MS;
 
 use MS\ACF\Groups\Page;
 use MS\ACF\Layouts\Hero;
+use MS\ACF\Layouts\OneLineCTA;
 use MS\ACF\Repeaters\Modules;
 
 class Bootstrap {
@@ -49,6 +50,7 @@ class Bootstrap {
 		add_filter( 'acf_to_post/init/layouts', function() {
 			return [
 				Hero::class,
+				OneLineCTA::class,
 			];
 		});
 	}
