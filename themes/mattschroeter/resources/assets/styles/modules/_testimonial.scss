@@ -1,0 +1,26 @@
+.testimonial {
+  background: $pure-white;
+
+  &__text {
+    font-size: $large;
+    font-style: italic;
+    letter-spacing: 1.2pt;
+    line-height: 1.5;
+  }
+
+  &__attribution {
+    text-align: right;
+    margin-right: 1rem;
+
+    &-name {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    &-org {
+      display: block;
+      font-style: italic;
+    }
+  }
+}

@@ -8,6 +8,7 @@ use MS\ACF\Groups\Page;
 use MS\ACF\Layouts\CascadingServices;
 use MS\ACF\Layouts\Hero;
 use MS\ACF\Layouts\OneLineCTA;
+use MS\ACF\Layouts\Testimonial;
 use MS\ACF\Repeaters\Modules;
 
 class Bootstrap {
@@ -53,6 +54,7 @@ class Bootstrap {
 				Hero::class,
 				OneLineCTA::class,
 				CascadingServices::class,
+				Testimonial::class,
 			];
 		});
 	}

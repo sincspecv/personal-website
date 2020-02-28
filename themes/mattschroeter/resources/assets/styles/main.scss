@@ -25,5 +25,8 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
-/** Import all modules **/
-@import "./modules/**/*";
+/** Import modules **/
+@import "modules/cascading-services";
+@import "modules/hero";
+@import "modules/one-line-cta";
+@import "modules/testimonial";
