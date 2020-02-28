@@ -9,14 +9,16 @@ $grey:                  #e3e3e3;
 $link:                  $primary-brand;
 
 /** Fonts **/
-$primary-font: "Open Sans", sans-serif;
-$secondary-font: "Abril Fatface", serif;
+$primary-font: "Montserrat", sans-serif;
+$secondary-font: "PT Serif", serif;
 
 /** Bulma Overrides **/
 $primary: $primary-brand;
 $blue: $light;
 $body-background-color: $white;
 $family-sans-serif: $primary-font;
+$footer-background-color: $dark;
+$footer-color: $white;
 
 /** Box Model  */
 $spacer:                2rem;

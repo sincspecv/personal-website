@@ -10,6 +10,7 @@ use MS\ACF\Layouts\Hero;
 use MS\ACF\Layouts\OneLineCTA;
 use MS\ACF\Layouts\Partners;
 use MS\ACF\Layouts\Testimonial;
+use MS\ACF\Options\SiteSettings;
 use MS\ACF\Repeaters\Modules;
 
 class Bootstrap {
@@ -17,6 +18,11 @@ class Bootstrap {
 		self::hooks();
 		self::filters();
 		self::globals();
+
+		/**
+		 * Options Pages
+		 */
+		SiteSettings::init();
 	}
 
 	/**

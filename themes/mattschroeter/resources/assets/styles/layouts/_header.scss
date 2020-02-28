@@ -3,7 +3,27 @@
 }
 
 .brand {
-  @extend %heading;
-
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: $primary-font;
   font-size: $large;
+  color: $primary;
+  height: 100%;
+
+  svg {
+    width: $xx-large;
+    height: auto;
+    margin-right: $xx-small;
+
+    path {
+      fill: $primary;
+    }
+  }
+
+  .site-title {
+    text-transform: uppercase;
+    letter-spacing: -0.5pt;
+  }
 }
