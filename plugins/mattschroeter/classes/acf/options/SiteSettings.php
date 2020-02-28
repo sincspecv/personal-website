@@ -3,7 +3,7 @@
 namespace MS\ACF\Options;
 
 class SiteSettings {
-	const SLUG = 'settings';
+	const SLUG = 'site_settings';
 	const SOCIAL_GROUP = 'social_media';
 
 	public static function init() 	{
@@ -19,6 +19,7 @@ class SiteSettings {
 			'page_title' => __('Site Settings', 'tfr'),
 			'menu_title' => __('Site Settings', 'tfr'),
 			'menu_slug'  => self::SLUG,
+			'post_id'    => self::SLUG,
 			'capability' => 'manage_options',
 		]);
 

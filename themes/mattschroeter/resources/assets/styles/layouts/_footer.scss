@@ -2,4 +2,33 @@ footer {
   hr {
     opacity: 0.35;
   }
+
+  a {
+    color: $white;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $light;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .social-icon {
+    width: $x-jumbo;
+    height: auto;
+    margin-right: $normal;
+
+    a,
+    svg {
+      display: block;
+      width: 100% !important;
+      height: auto;
+    }
+  }
 }

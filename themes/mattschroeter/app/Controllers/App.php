@@ -30,4 +30,13 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    /**
+     * Social media accounts defined in site settings
+     *
+     * @return object
+     */
+    public function social_media() {
+        return json_decode(json_encode(get_field('social_accounts', 'site_settings')));
+    }
 }
