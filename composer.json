@@ -40,6 +40,7 @@
     "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "2.3.*",
     "sincspecv/wp-acf-to-post": "0.1.0",
     "sincspecv/acf-pro": "5.8.7",
-    "littlebizzy/speed-demon": "1.4.0"
+    "littlebizzy/speed-demon": "1.4.0",
+    "wpackagist-plugin/fluentform": "dev-trunk"
   }
 }

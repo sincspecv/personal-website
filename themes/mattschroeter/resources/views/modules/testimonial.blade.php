@@ -3,7 +3,7 @@
     <div class="columns">
       <div class="column">
         <div class="testimonial__text">
-          <p>"{{ $fields->testimonial }}"</p>
+          <p>{{ $fields->testimonial }}</p>
         </div>
         <div class="testimonial__attribution">
           <span class="testimonial__attribution-name">{{ $fields->attribution_name }}</span>

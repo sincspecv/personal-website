@@ -1,0 +1,30 @@
+.partners {
+  &__text {
+    .column {
+      text-align: center;
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: $large;
+        display: inline-block;
+        max-width: 400px;
+      }
+    }
+  }
+
+  &__images {
+    .column {
+      text-align: center;
+    }
+
+    img {
+      max-height: 6rem;
+      width: auto;
+      filter: grayscale(1);
+      opacity: 0.6;
+    }
+  }
+}
