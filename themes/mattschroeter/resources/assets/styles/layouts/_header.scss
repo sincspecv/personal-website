@@ -1,29 +1,114 @@
-.banner .nav li {
-  @extend .navbar-item;
-}
+.banner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: $white;
+  z-index: 100;
+  transition: all 0.2s ease-in-out;
 
-.brand {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: $primary-font;
-  font-size: $large;
-  color: $primary;
-  height: 100%;
+  .nav li {
+    @extend .navbar-item;
+  }
 
-  svg {
-    width: $xx-large;
-    height: auto;
-    margin-right: $xx-small;
+  .navbar {
+    background: transparent;
+    margin: 0 $x-small;
+  }
 
-    path {
-      fill: $primary;
+  .navbar-item {
+    position: relative;
+    padding: 0;
+    margin: $xx-small $normal;
+    color: $primary;
+    transition: all 0.2s ease-in-out;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: $primary;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: width 0.2s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 
-  .site-title {
-    text-transform: uppercase;
-    letter-spacing: -0.5pt;
+  .navbar-burger {
+    span {
+      background-color: $primary;
+    }
+  }
+
+  .brand {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: $primary-font;
+    font-size: $large;
+    color: $primary;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+
+    svg {
+      width: $xx-large;
+      height: auto;
+      margin-right: $xx-small;
+
+      path {
+        fill: $primary;
+      }
+    }
+
+    .site-title {
+      text-transform: uppercase;
+      letter-spacing: -0.5pt;
+    }
+  }
+
+  &.transparent {
+    background: transparent;
+
+    .navbar {
+      &-item {
+        color: $white;
+
+        &:hover {
+          background: transparent;
+        }
+
+        &::after {
+          background: $white;
+        }
+      }
+
+      &-burger {
+        span {
+          background-color: $white;
+        }
+      }
+    }
+
+    .brand {
+      color: $white;
+
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
   }
 }

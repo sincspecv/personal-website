@@ -94,3 +94,23 @@ add_filter('comments_template', function ($comments_template) {
  * Start ACF get_row_index() at 0
  */
 add_filter('acf/settings/row_index_offset', '__return_zero');
+
+/**
+ * Add hero body class if hero module is used
+ */
+add_filter('body_class', function($classes) {
+    global $post;
+
+    $fields = get_fields($post->ID);
+
+    if($fields['page_modules']) {
+        foreach($fields['page_modules'] as $module) {
+            if($module['acf_fc_layout'] == 'hero') {
+                array_push($classes, 'has-hero');
+                break;
+            }
+        }
+    }
+
+    return $classes;
+});
