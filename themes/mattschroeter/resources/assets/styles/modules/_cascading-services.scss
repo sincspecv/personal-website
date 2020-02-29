@@ -1,4 +1,6 @@
 .cascading-services {
+  padding-top: 5rem;
+
   .service {
     .column {
       position: relative;
@@ -46,16 +48,31 @@
       padding: 2.5rem;
 
       &-link {
-        display: block;
+        position: relative;
+        display: inline-block;
         font-weight: bold;
         text-transform: uppercase;
-        text-decoration: underline;
         color: $light;
         margin-top: $xx-small;
         transition: all 0.2s ease-in-out;
 
+        &::after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: $light;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transition: all 0.2s ease-in-out;
+        }
+
         &:hover {
           color: $primary-brand;
+
+          &::after {
+            background-color: $primary-brand;
+          }
         }
       }
     }

@@ -12,17 +12,6 @@ $link:                  $primary-brand;
 $primary-font: "Montserrat", sans-serif;
 $secondary-font: "PT Serif", serif;
 
-/** Bulma Overrides **/
-$primary: $primary-brand;
-$blue: $light;
-$body-background-color: $white;
-$family-sans-serif: $primary-font;
-$footer-background-color: $dark;
-$footer-color: $white;
-
-/** Box Model  */
-$spacer:                2rem;
-
 /** Type Scale Sizing **/
 $x-jumbo:  2.488rem;
 $jumbo:    2.047rem;
@@ -33,6 +22,40 @@ $normal:   1rem;
 $small:    0.833rem;
 $x-small:  0.694rem;
 $xx-small: 0.579rem;
+
+/** Box Model  */
+$spacer: $jumbo;
+
+/** Bulma Colors **/
+$primary: $primary-brand;
+$blue: $light;
+$body-background-color: $white;
+$family-sans-serif: $primary-font;
+
+/** Bulma Sizing/Spacing **/
+$gap: 31.104px;
+$size-1: 2.986rem;
+$size-2: $x-jumbo;
+$size-3: $jumbo;
+$size-4: $x-large;
+$size-5: $large;
+$size-6: $normal;
+$size-7: $small;
+$block-spacing: $x-large;
+
+/** Bulma Appearance **/
+$easing: ease-in-out;
+$radius-small: 4px;
+$radius: 8px;
+$radius-large: 16px;
+$hr-margin: $xx-large 0;
+$body-font-size: $normal;
+$section-padding: 2.986rem $x-large;
+
+/** Bulma Footer **/
+$footer-background-color: $dark;
+$footer-color: $white;
+$footer-padding: $x-jumbo $x-large;
 
 /** Placehoders **/
 %heading {

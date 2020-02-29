@@ -3,5 +3,18 @@
 
   .columns {
     align-items: flex-start;
+
+    .column {
+      &.is-one-quarter-desktop {
+        @media screen and (min-width: 1023px) {
+          text-align: right;
+        }
+      }
+
+      .button {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
   }
 }
