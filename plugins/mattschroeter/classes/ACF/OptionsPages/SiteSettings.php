@@ -1,6 +1,6 @@
 <?php
 
-namespace MS\ACF\Options;
+namespace MS\ACF\OptionsPages;
 
 class SiteSettings {
 	const SLUG = 'site_settings';

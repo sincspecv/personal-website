@@ -4,14 +4,11 @@
 namespace MS;
 
 
-use MS\ACF\Groups\Page;
-use MS\ACF\Layouts\CascadingServices;
-use MS\ACF\Layouts\Hero;
-use MS\ACF\Layouts\OneLineCTA;
-use MS\ACF\Layouts\Partners;
-use MS\ACF\Layouts\Testimonial;
-use MS\ACF\Options\SiteSettings;
-use MS\ACF\Repeaters\Modules;
+use MS\ACF\Groups;
+use MS\ACF\Layouts;
+use MS\ACF\OptionsPages;
+use MS\ACF\Repeaters;
+use MS\PostTypes;
 
 class Bootstrap {
 	public static function init() {
@@ -22,7 +19,12 @@ class Bootstrap {
 		/**
 		 * Options Pages
 		 */
-		SiteSettings::init();
+		OptionsPages\SiteSettings::init();
+
+		/**
+		 * Post Types
+		 */
+		PostTypes\Services::init();
 	}
 
 	/**
@@ -44,25 +46,25 @@ class Bootstrap {
 		// ACF Groups
 		add_filter( 'acf_to_post/init/groups', function() {
 			return [
-				Page::class,
+				Groups\Page::class,
 			];
 		});
 
 		// ACF Repeater Fields
 		add_filter( 'acf_to_post/init/fields', function() {
 			return [
-				Modules::class,
+				Repeaters\Modules::class,
 			];
 		});
 
 		// ACF Layouts
 		add_filter( 'acf_to_post/init/layouts', function() {
 			return [
-				Hero::class,
-				OneLineCTA::class,
-				CascadingServices::class,
-				Testimonial::class,
-				Partners::class,
+				Layouts\Hero::class,
+				Layouts\OneLineCTA::class,
+				Layouts\CascadingServices::class,
+				Layouts\Testimonial::class,
+				Layouts\Partners::class,
 			];
 		});
 	}
