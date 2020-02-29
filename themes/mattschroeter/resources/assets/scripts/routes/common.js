@@ -34,5 +34,24 @@ export default {
         });
       }
     })
+
+    /**
+     * Mobile nav
+     */
+    const hamburger = document.querySelector('.navbar-burger')
+    const mobileMenu = document.querySelector('.nav-mobile')
+    hamburger.addEventListener('click', e => {
+      e.preventDefault()
+      mobileMenu.classList.toggle('active')
+      const navItems = mobileMenu.querySelectorAll('.navbar-item');
+      if(navItems.length && mobileMenu.classList.contains('active')) {
+        let itemHeight = navItems[0].getBoundingClientRect().height
+        let height = (itemHeight * navItems.length) + 17
+
+        mobileMenu.style.height = `${height}px`
+      } else {
+        mobileMenu.style.height = 0;
+      }
+    })
   },
 };

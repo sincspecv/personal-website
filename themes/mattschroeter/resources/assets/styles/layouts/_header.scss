@@ -78,6 +78,38 @@
     }
   }
 
+  .nav-mobile {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: $pure-white;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+
+    &.active {
+      max-height: 100vh;
+      overflow-y: scroll;
+    }
+
+    .navbar {
+      &-menu {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+
+      &-item {
+        color: $primary !important;
+        margin: 0;
+        padding: $xx-small $normal;
+      }
+    }
+
+    @media screen and (min-width: 1023px) {
+      display: none;
+    }
+  }
+
   &.transparent {
     background: transparent;
 

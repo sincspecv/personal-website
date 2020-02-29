@@ -45,4 +45,11 @@
       </div>
     </div>
   </div>
+  <div class="nav-mobile">
+    @if (has_nav_menu('primary_navigation'))
+      <nav class="nav-mobile__menu">
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-menu', 'container' => false, 'after' => '</div>', 'walker' => new \App\Navigation\Navwalker()]) !!}
+      </nav>
+    @endif
+  </div>
 </header>
