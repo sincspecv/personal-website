@@ -53,3 +53,13 @@
     @endif
   </div>
 </header>
+
+@if(!is_front_page())
+<div class="section page-title">
+  <div class="columns">
+    <div class="column">
+      @php the_title() @endphp
+    </div>
+  </div>
+</div>
+@endif

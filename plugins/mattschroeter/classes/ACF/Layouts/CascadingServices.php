@@ -53,7 +53,6 @@ class CascadingServices extends Layout {
 					] ),
 				]
 			] ),
-
 		];
 	}
 }

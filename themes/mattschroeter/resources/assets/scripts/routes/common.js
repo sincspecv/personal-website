@@ -21,7 +21,6 @@ export default {
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-
       if(document.body.classList.contains('has-hero')) {
         toggleTransparentClass()
 

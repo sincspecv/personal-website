@@ -47,6 +47,7 @@ class Bootstrap {
 		add_filter( 'acf_to_post/init/groups', function() {
 			return [
 				Groups\Page::class,
+				Groups\Service::class,
 			];
 		});
 
@@ -54,6 +55,7 @@ class Bootstrap {
 		add_filter( 'acf_to_post/init/fields', function() {
 			return [
 				Repeaters\Modules::class,
+				Repeaters\ServiceModules::class,
 			];
 		});
 
@@ -65,6 +67,7 @@ class Bootstrap {
 				Layouts\CascadingServices::class,
 				Layouts\Testimonial::class,
 				Layouts\Partners::class,
+				Layouts\Content::class,
 			];
 		});
 	}

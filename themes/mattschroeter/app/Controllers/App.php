@@ -39,4 +39,13 @@ class App extends Controller
     public function social_media() {
         return json_decode(json_encode(get_field('social_accounts', 'site_settings')));
     }
+
+    /**
+     * Slug for ACF modules based on post type. This variable is used in the modules.blade.php template.
+     *
+     * @return string
+     */
+    public function modules_slug() {
+        return get_post_type() . '_modules';
+    }
 }

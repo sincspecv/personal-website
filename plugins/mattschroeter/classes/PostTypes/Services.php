@@ -3,7 +3,7 @@
 namespace MS\PostTypes;
 
 class Services {
-	const SLUG = 'services';
+	const SLUG = 'service';
 	const SINGULAR = 'Service';
 	const PLURAL = 'Services';
 
@@ -34,7 +34,7 @@ class Services {
 			'labels'             => $labels,
 			'public'             => true,
 			'publicly_queryable' => true,
-			'has_archive'        => true,
+			'has_archive'        => false,
 			'show_ui'            => true,
 			'show_in_nav_menus'  => true,
 			'hierarchical'       => true,

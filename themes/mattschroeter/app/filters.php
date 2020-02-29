@@ -99,12 +99,13 @@ add_filter('acf/settings/row_index_offset', '__return_zero');
  * Add hero body class if hero module is used
  */
 add_filter('body_class', function($classes) {
-    global $post;
+    $post_id = get_the_ID();
 
-    $fields = get_fields($post->ID);
+    $fields  = get_fields($post_id);
+    $modules = $fields[get_post_type() . '_modules'];
 
-    if($fields['page_modules']) {
-        foreach($fields['page_modules'] as $module) {
+    if(!empty($modules)) {
+        foreach($modules as $module) {
             if($module['acf_fc_layout'] == 'hero') {
                 array_push($classes, 'has-hero');
                 break;
