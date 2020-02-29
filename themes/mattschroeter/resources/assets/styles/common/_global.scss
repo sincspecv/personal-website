@@ -54,3 +54,22 @@ h6,
 .h6 {
   font-size: $small;
 }
+
+.skip-link {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: $large;
+  font-size: $x-large;
+  background: $white;
+  z-index: 300;
+
+  &:not(:focus) {
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    left: -100%;
+  }
+}

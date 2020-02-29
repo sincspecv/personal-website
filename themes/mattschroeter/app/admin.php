@@ -22,3 +22,16 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
 add_action('customize_preview_init', function () {
     wp_enqueue_script('sage/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
 });
+
+/**
+ * Skip Link
+ */
+add_action('wp_body_open', function() {
+    $skip_link = sprintf('<a class="%s" href="%s" tabindex="0">%s</a>',
+        'skip-link',
+        '#main',
+        'Skip to content'
+    );
+
+    echo $skip_link;
+}, 1);

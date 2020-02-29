@@ -2,11 +2,12 @@
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
   <body @php body_class() @endphp>
+    @php wp_body_open() @endphp
     @php do_action('get_header') @endphp
     @include('partials.header')
     <div class="wrap" role="document">
       <div class="content">
-        <main class="main">
+        <main class="main" id="main">
           @yield('content')
         </main>
         @if (App\display_sidebar())
