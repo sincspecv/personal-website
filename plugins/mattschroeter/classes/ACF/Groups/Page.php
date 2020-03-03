@@ -16,4 +16,20 @@ class Page extends Group {
 		$this->setPostTypes( ['page', 'post'] );
 		$this->setHiddenElements( ['the_content'] );
 	}
+
+	public function setFields() {
+		$fields = new FieldGenerator($this->getKey());
+
+		$this->fields = [
+			$fields->add('text', [
+				'name'  => 'subtitle',
+				'label' => __('Subtitle', 'tfr')
+			]),
+
+			$fields->add('wysiwyg', [
+				'name'  => 'intro_text',
+				'label' => __('Intro Text', 'tfr')
+			])
+		];
+	}
 }

@@ -23,12 +23,12 @@ class Service extends Group {
 		$this->fields = [
 			$fields->add('text', [
 				'name'  => 'subtitle',
-				'label' => __( 'Subtitle', 'tfr' ),
+				'label' => __('Subtitle', 'tfr')
 			]),
 
 			$fields->add('wysiwyg', [
-				'name'  => 'intro',
-				'label' => __( 'Intro Text', 'tfr' ),
+				'name'  => 'intro_text',
+				'label' => __('Intro Text', 'tfr')
 			])
 		];
 	}

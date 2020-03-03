@@ -1,7 +1,9 @@
 <section class="section content">
-  <div class="columns">
-    <article class="column is-full content__text">
-      {!! $fields->text !!}
-    </article>
+  <div class="container">
+    <div class="columns">
+      <article class="column is-full content__text">
+        {!! $fields->text !!}
+      </article>
+    </div>
   </div>
 </section>

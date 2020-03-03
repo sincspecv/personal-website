@@ -14,9 +14,12 @@ html {
 }
 
 body {
-  //background-color: $white;
   color: $black;
   -webkit-font-smoothing: antialiased;
+
+  &:not(.has-hero) {
+    margin-top: 3.25rem;
+  }
 }
 
 h1,
@@ -55,6 +58,13 @@ h6,
   font-size: $small;
 }
 
+p,
+span,
+a,
+strong {
+  letter-spacing: 0.8pt;
+}
+
 .skip-link {
   display: inline-block;
   position: absolute;
@@ -71,5 +81,31 @@ h6,
     padding: 0;
     overflow: hidden;
     left: -100%;
+  }
+}
+
+.page-title {
+  background: $pure-white;
+
+  h1 {
+    font-family: $primary-font;
+    font-weight: bold;
+    font-size: $x-jumbo;
+  }
+
+  h2 {
+    font-family: $primary-font;
+    letter-spacing: 1pt;
+  }
+
+  &:not(.with-intro) {
+    background: $primary;
+    background: linear-gradient(231deg, $primary, $dark, $light, $dark, $primary, $light);
+    background-size: 600% 600%;
+    animation: HeroGradient 30s ease infinite;
+
+    h1 {
+      color: $white;
+    }
   }
 }

@@ -61,7 +61,23 @@ $footer-padding: $x-jumbo $x-large;
 /** Placehoders **/
 %heading {
   font-family: $secondary-font;
+  font-weight: bold;
   letter-spacing: 1.2pt;
   text-shadow: 1px 1px 1px rgba($dark, 0.004);
   color: $dark;
+}
+
+/** Animations **/
+@keyframes HeroGradient {
+  0% {
+    background-position: 0 4%;
+  }
+
+  50% {
+    background-position: 100% 97%;
+  }
+
+  100% {
+    background-position: 0 4%;
+  }
 }
