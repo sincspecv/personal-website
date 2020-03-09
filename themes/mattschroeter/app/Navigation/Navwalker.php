@@ -28,7 +28,7 @@ class Navwalker extends Walker_Nav_Menu {
 
         if($hasChildren){
             $output .= "<div class='".$liClasses."'>";
-            $output .= "\n<a class='navbar-link' href='".$item->url."'>".$item->title."</a>";
+            $output .= "\n<a class='navbar-link is-arrowless' href='".$item->url."'>".$item->title."</a>";
         }
         else {
             $output .= "<a class='".$liClasses."' href='".$item->url."'>".$item->title;

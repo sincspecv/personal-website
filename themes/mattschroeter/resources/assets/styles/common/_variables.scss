@@ -33,6 +33,7 @@ $body-background-color: $white;
 $family-sans-serif: $primary-font;
 
 /** Bulma Sizing/Spacing **/
+$column-gap: $small;
 $gap: 31.104px;
 $size-1: 2.986rem;
 $size-2: $x-jumbo;
@@ -52,6 +53,11 @@ $radius-large: 16px;
 $hr-margin: $xx-large 0;
 $body-font-size: $normal;
 $section-padding: 2.986rem $x-large;
+
+/** Bulma Navbar **/
+$navbar-dropdown-radius: $radius-small;
+$navbar-background-color: transparent;
+$navbar-item-hover-background-color: transparent;
 
 /** Bulma Footer **/
 $footer-background-color: $dark;
