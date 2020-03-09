@@ -24,6 +24,15 @@ class Content extends Layout {
 				'name'  => 'text',
 				'label' => __( 'Text', 'tfr' ),
 			]),
+
+			$fields->add( 'select', [
+				'name'  => 'background',
+				'label' => __( 'Background Color', 'tfr' ),
+				'choices' => [
+					'#f5f7f9' => 'Grey',
+					'#fefefe' => 'White'
+				]
+			])
 		];
 	}
 }

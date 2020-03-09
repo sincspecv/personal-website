@@ -68,6 +68,7 @@ class Bootstrap {
 				Layouts\Testimonial::class,
 				Layouts\Partners::class,
 				Layouts\Content::class,
+				Layouts\FiiftyFifty::class,
 			];
 		});
 	}

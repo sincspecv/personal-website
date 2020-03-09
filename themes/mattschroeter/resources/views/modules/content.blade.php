@@ -1,4 +1,4 @@
-<section class="section content">
+<section class="section content" style="background:{!! $fields->background !!}">
   <div class="container">
     <div class="columns">
       <article class="column is-full content__text">

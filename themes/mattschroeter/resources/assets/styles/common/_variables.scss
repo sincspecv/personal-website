@@ -31,6 +31,7 @@ $primary: $primary-brand;
 $blue: $light;
 $body-background-color: $white;
 $family-sans-serif: $primary-font;
+$white-ter: $pure-white;
 
 /** Bulma Sizing/Spacing **/
 $column-gap: $small;
@@ -66,9 +67,9 @@ $footer-padding: $x-jumbo $x-large;
 
 /** Placehoders **/
 %heading {
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-weight: bold;
-  letter-spacing: 1.2pt;
+  letter-spacing: 1pt;
   text-shadow: 1px 1px 1px rgba($dark, 0.004);
   color: $dark;
 }

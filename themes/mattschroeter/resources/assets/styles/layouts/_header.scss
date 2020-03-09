@@ -125,7 +125,7 @@
       color: $primary-brand;
 
       &:hover {
-        color: $light;
+        color: $dark;
 
         &::after {
           content: none;
@@ -164,7 +164,7 @@
           color: $primary-brand;
 
           &:hover {
-            color: $light;
+            color: $dark;
           }
         }
       }

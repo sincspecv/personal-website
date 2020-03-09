@@ -1,0 +1,24 @@
+.fifty-fifty {
+  .row {
+    &:nth-of-type(even) {
+      .row__image {
+        order: 2;
+      }
+
+      .row__content {
+        order: 1;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: $x-jumbo;
+    }
+
+    &__image {
+      figure {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
