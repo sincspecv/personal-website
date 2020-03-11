@@ -115,7 +115,26 @@
         color: $primary !important;
         margin: 0;
         padding: $xx-small $normal;
+
+        &:hover {
+          &::after {
+            content: none;
+          }
+        }
       }
+    }
+
+    .has-dropdown {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+
+      .navbar-link {
+        padding-left: 0 !important;
+      }
+    }
+
+    #mobile-nav {
+      padding: 8px 0;
     }
 
     @media screen and (min-width: 1023px) {
@@ -126,9 +145,30 @@
   .navbar-dropdown {
     .navbar-item {
       color: $primary-brand;
+      position: relative;
+      padding-right: 0;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 2px;
+        height: $small;
+        background-color: $primary;
+        position: absolute;
+        left: -6px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: all 0.1s ease-in-out;
+      }
 
       &:hover {
         color: $dark;
+        background-color: transparent;
+
+        &::before {
+          opacity: 1;
+        }
 
         &::after {
           content: none;

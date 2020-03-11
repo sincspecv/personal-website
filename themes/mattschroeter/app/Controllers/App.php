@@ -49,6 +49,11 @@ class App extends Controller
         return get_post_type() . '_modules';
     }
 
+    /**
+     * Bulma friendly version of WP pagination function
+     *
+     * @param array $args
+     */
     public static function pagination( $args = [] ) {
         global $wp_query, $wp_rewrite;
 

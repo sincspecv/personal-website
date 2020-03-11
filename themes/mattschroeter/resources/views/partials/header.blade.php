@@ -58,7 +58,7 @@
       <div class="nav-primary navbar-menu">
         @if (has_nav_menu('primary_navigation'))
           <nav class="navbar-end">
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-menu', 'container' => false, 'after' => '</div>', 'walker' => new \App\Navigation\Navwalker()]) !!}
+            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-menu', 'container' => 'div', 'container_id' => 'primary-nav', 'container_class' => 'navbar-start', 'items_wrap' => '%3$s', 'after' => '</div>', 'walker' => new \App\Navigation\Navwalker()]) !!}
           </nav>
         @endif
       </div>
@@ -67,7 +67,7 @@
   <div class="nav-mobile">
     @if (has_nav_menu('primary_navigation'))
       <nav class="nav-mobile__menu">
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-menu', 'container' => false, 'after' => '</div>', 'walker' => new \App\Navigation\Navwalker()]) !!}
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-menu', 'container' => 'div', 'container_id' => 'mobile-nav', 'container_class' => 'navbar-start', 'items_wrap' => '%3$s', 'after' => '</div>', 'walker' => new \App\Navigation\Navwalker()]) !!}
       </nav>
     @endif
   </div>
