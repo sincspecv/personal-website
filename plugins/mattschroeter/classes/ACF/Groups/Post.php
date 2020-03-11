@@ -7,13 +7,13 @@ namespace MS\ACF\Groups;
 use TFR\ACFToPost\Base\Group;
 use TFR\ACFToPost\Util\FieldGenerator;
 
-class Page extends Group {
+class Post extends Group {
 	public function __construct() {
 		parent::__construct();
 
 		// Set the group parameters
-		$this->setTitle( __( 'Page Content', 'tfr' ) );
-		$this->setPostTypes( ['page'] );
+		$this->setTitle( __( 'Post Content', 'tfr' ) );
+		$this->setPostTypes( ['post'] );
 		$this->setHiddenElements( ['the_content'] );
 	}
 

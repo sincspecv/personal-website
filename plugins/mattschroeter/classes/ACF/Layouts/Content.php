@@ -13,7 +13,7 @@ class Content extends Layout {
 
 		$this->setName( 'content' );
 		$this->setLabel( __( 'Content', 'tfr' ) );
-		$this->setRepeaters( ['modules', 'service_modules'] );
+		$this->setRepeaters( ['modules', 'service_modules', 'post_modules'] );
 	}
 
 	public function setFields() {

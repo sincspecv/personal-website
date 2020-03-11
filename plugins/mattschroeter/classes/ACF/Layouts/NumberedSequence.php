@@ -13,7 +13,7 @@ class NumberedSequence extends Layout {
 
 		$this->setName( 'numbered_sequence' );
 		$this->setLabel( __( 'Numbered Sequence', 'tfr' ) );
-		$this->setRepeaters( ['modules', 'service_modules'] );
+		$this->setRepeaters( ['modules', 'service_modules', 'post_modules'] );
 	}
 
 	public function setFields() {

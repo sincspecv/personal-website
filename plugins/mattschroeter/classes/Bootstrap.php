@@ -47,6 +47,7 @@ class Bootstrap {
 		add_filter( 'acf_to_post/init/groups', function() {
 			return [
 				Groups\Page::class,
+				Groups\Post::class,
 				Groups\Service::class,
 			];
 		});
@@ -55,6 +56,7 @@ class Bootstrap {
 		add_filter( 'acf_to_post/init/fields', function() {
 			return [
 				Repeaters\Modules::class,
+				Repeaters\PostModules::class,
 				Repeaters\ServiceModules::class,
 			];
 		});

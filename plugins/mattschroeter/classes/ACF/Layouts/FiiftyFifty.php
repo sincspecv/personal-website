@@ -13,7 +13,7 @@ class FiiftyFifty extends Layout {
 
 		$this->setName( '50_50' );
 		$this->setLabel( __( '50/50', 'tfr' ) );
-		$this->setRepeaters( ['modules', 'service_modules'] );
+		$this->setRepeaters( ['modules', 'service_modules', 'post_modules'] );
 	}
 
 	public function setFields() {

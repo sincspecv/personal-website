@@ -13,7 +13,7 @@ class Testimonial extends Layout {
 
 		$this->setName( 'testimonial' );
 		$this->setLabel( __( 'Testimonial', 'tfr' ) );
-		$this->setRepeaters( ['modules'] );
+		$this->setRepeaters( ['modules', 'service_modules', 'post_modules'] );
 	}
 
 	public function setFields() {

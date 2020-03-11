@@ -15,7 +15,7 @@
             <h3>{!! esc_attr( $item->heading ) !!}</h3>
           </div>
           <article class="sequence-item__text">
-            {!! $item->text !!}
+            <p>{!! esc_attr( $item->text ) !!}</p>
           </article>
         </div>
       @endforeach

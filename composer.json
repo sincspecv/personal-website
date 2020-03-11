@@ -36,7 +36,7 @@
   },
   "minimum-stability": "dev",
   "require": {
-    "wpackagist-plugin/wordpress-seo": "13.1.*",
+    "wpackagist-plugin/wordpress-seo": "13.2.*",
     "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "2.3.*",
     "sincspecv/wp-acf-to-post": "0.1.0",
     "sincspecv/acf-pro": "5.8.7",

@@ -13,7 +13,7 @@ class CascadingServices extends Layout {
 
 		$this->setName( 'cascading_services' );
 		$this->setLabel( __( 'Cascading Services', 'tfr' ) );
-		$this->setRepeaters( ['modules'] );
+		$this->setRepeaters( ['modules', 'post_modules'] );
 	}
 
 	public function setFields() {

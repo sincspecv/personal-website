@@ -13,7 +13,7 @@ class OneLineCTA extends Layout {
 
 		$this->setName( 'one_line_cta' );
 		$this->setLabel( __( 'One Line CTA', 'tfr' ) );
-		$this->setRepeaters( ['modules'] );
+		$this->setRepeaters( ['modules', 'service_modules', 'post_modules'] );
 	}
 
 	public function setFields() {
