@@ -69,6 +69,7 @@ class Bootstrap {
 				Layouts\Partners::class,
 				Layouts\Content::class,
 				Layouts\FiiftyFifty::class,
+				Layouts\NumberedSequence::class,
 			];
 		});
 	}
