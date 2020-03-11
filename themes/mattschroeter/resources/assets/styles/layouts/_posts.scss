@@ -1,6 +1,41 @@
 .post-meta {
   display: inline-block;
-  color: $white;
   font-size: $small;
   letter-spacing: 1pt;
+}
+
+.post-archive {
+  .archive-post {
+    figure {
+      margin: 0 $large;
+    }
+
+    .post-content {
+      margin: $large;
+
+      &__title {
+        margin-bottom: 0.279rem;
+        color: $primary;
+        transition: color 0.1s ease-in-out;
+      }
+
+      &__date {
+        display: inline-block;
+        margin-bottom: $small;
+        font-size: $small;
+      }
+    }
+
+    &:hover {
+      .post-content {
+        &__title {
+          color: $light;
+        }
+      }
+    }
+
+    .box {
+      background-color: $white-ter;
+    }
+  }
 }

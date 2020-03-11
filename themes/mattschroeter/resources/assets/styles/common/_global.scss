@@ -114,6 +114,10 @@ strong {
       color: $white;
       margin: 0;
     }
+
+    .post-meta {
+      color: $white;
+    }
   }
 }
 
@@ -121,5 +125,31 @@ strong {
   figure {
     margin-left: $xx-large;
     margin-right: $xx-large;
+  }
+}
+
+.pagination {
+  &-list {
+    margin: 0 auto !important;
+    list-style: none !important;
+    justify-content: center;
+
+    li {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+.no-search-results,
+.four-oh-four {
+  min-height: 50vh;
+  text-align: center;
+
+  .h3 {
+    margin-bottom: $x-large;
+  }
+
+  form {
+    justify-content: center;
   }
 }

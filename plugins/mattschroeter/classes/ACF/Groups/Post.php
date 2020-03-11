@@ -24,13 +24,18 @@ class Post extends Group {
 			$this->fields = [
 				$fields->add('text', [
 					'name'  => 'subtitle',
-					'label' => __('Subtitle', 'tfr')
+					'label' => __( 'Subtitle', 'tfr' ),
 				]),
 
 				$fields->add('wysiwyg', [
 					'name'  => 'intro_text',
-					'label' => __('Intro Text', 'tfr')
-				])
+					'label' => __( 'Intro Text', 'tfr' ),
+				]),
+
+				$fields->add( 'textarea', [
+					'name'  => 'excerpt',
+					'label' => __( 'Excerpt', 'tfr' ),
+				]),
 			];
 		}
 	}

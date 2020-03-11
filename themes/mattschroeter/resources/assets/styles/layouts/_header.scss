@@ -47,6 +47,7 @@
     &.has-dropdown {
       > .navbar-link {
         padding: 0;
+        color: $primary;
       }
     }
 
@@ -108,7 +109,9 @@
         flex-flow: column nowrap;
       }
 
-      &-item {
+      &-item,
+      &-item.has-dropdown,
+      &-item.has-dropdown > a {
         color: $primary !important;
         margin: 0;
         padding: $xx-small $normal;

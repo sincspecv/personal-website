@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-full">
-          @php the_title('<h1>', '</h1>') @endphp
+          <h1>{!! App::title() !!}</h1>
           @if( get_post_type() == 'post' )
             <div class="post-meta">
               <span class="post-meta__author">By {!! esc_attr( $post->post_author ) !!}</span> | <span class="post-meta__date"><i class="fal fa-clock" aria-hidden="true"></i> {!! $post->post_date !!}</span>
