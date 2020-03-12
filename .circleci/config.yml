@@ -32,7 +32,7 @@ jobs:
           command: |
             cd themes/${theme}
             composer install -n --prefer-dist
-            yarn install
+            yarn install --frozen-lockfile
             yarn build:production
       - run:
           name: Upload Theme
