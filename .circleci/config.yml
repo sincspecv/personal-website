@@ -1,23 +1,43 @@
 version: 2.0
 jobs:
   build:
-    machine:
-      image: circleci/classic:latest
+    docker: # run the steps with Docker
+      - image: circleci/php:7.1-node-browsers
     branches:
       only:
         - dev
     steps:
+      - checkout
+      - run:
+          name: Update Aptitude
+          command: sudo apt-get update
+      - run: sudo apt install -y libsqlite3-dev zlib1g-dev
+      - run: sudo docker-php-ext-install zip
+      - run: sudo composer self-update
       - run:
           name: Install LFTP
+          command: sudo apt-get install lftp
+      - run:
+          name: Install Composer
+          command: sudo apt-get install composer
+      - restore_cache: # special step to restore the dependency cache if `composer.lock` does not change
+          keys:
+            - composer-v1-{{ checksum "composer.lock" }}
+            # fallback to using the latest cache if no exact match is found (See https://circleci.com/docs/2.0/caching/)
+            - composer-v1-
+      - run: composer install -n --prefer-dist
+      - save_cache: # special step to save the dependency cache with the `composer.lock` cache key template
+          key: composer-v1-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+      - run:
+          name: Install theme Dependencies
           command: |
-            sudo apt-get update;
-            sudo apt-get install lftp;
-            sudo apt-get install composer;
-      - checkout
+            cd themes/${theme};
+            composer install -n --prefer-dist;
+            yarn install;
+            yarn build;
       - run:
           name: Upload Theme
           command: |
-            composer install;
-            cd themes/${theme};
-            composer install;
             lftp sftp://${username}:${password}@${hostname}:${port} -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ domains/${site_name}/public_html/wp-content/themes/${theme}; quit";
