@@ -45,4 +45,4 @@ jobs:
       - run:
           name: Upload Theme
           command: |
-            lftp sftp://${username}:${password}@${hostname}:${port} -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ domains/${site_name}/public_html/wp-content/themes/${theme}; quit";
+            lftp -c "set sftp:auto-confirm yes ; open -u ${username},${password} sftp://${hostname}:${port} -e mirror -v -R --exclude .git/ --exclude .circleci/ ./ domains/${site_name}/public_html/wp-content/themes/${theme}; quit";
