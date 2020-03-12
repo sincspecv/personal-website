@@ -30,10 +30,10 @@ jobs:
       - run:
           name: Install theme Dependencies
           command: |
-            cd themes/${theme};
-            composer install -n --prefer-dist;
-            yarn install;
-            yarn build;
+            cd themes/${theme}
+            composer install -n --prefer-dist
+            yarn install
+            yarn build:production
       - run:
           name: Upload Theme
           command: |
