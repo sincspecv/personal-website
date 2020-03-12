@@ -3,6 +3,7 @@ themes/mattschroeter/dist
 themes/mattschroeter/node_modules
 themes/mattschroeter/npm-debug.log
 themes/mattschroeter/yarn-error.log
+themes/mattschroeter/yarn.lock
 themes/mattschroeter/vendor
 themes/mattschroeter/resources/assets/config-local.json
 

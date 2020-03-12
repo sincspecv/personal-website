@@ -32,8 +32,8 @@ jobs:
           command: |
             cd themes/${theme}
             composer install -n --prefer-dist
-            npm install
-            npm run build:production
+            yarn install
+            yarn build:production
       - run:
           name: Upload Theme
           command: |
