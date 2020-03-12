@@ -39,10 +39,10 @@ jobs:
           name: Install theme Dependencies
           command: |
             cd themes/${theme}
-            composer install -n --prefer-dist
+            composer install -n --prefer-dist --no-dev
             yarn install --frozen-lockfile
             yarn build:production
       - run:
           name: Upload Theme
           command: |
-            lftp -c "set sftp:auto-confirm yes ; open -u ${username},${password} sftp://${hostname}:${port} ; -e 'mirror -v -R --exclude .git/ --exclude node_modules/ --exclude CHANGELOG.md --exclude CODE_OF_CONDUCT.md --exclude composer.json --exclude composer.lock --exclude package.json --exclude yarn.lock ./themes/${theme} domains/${site_name}/public_html/wp-content/themes/${theme};' quit";
+            lftp -c "set sftp:auto-confirm yes; open -u ${username},${password} sftp://${hostname}:${port}; mirror -e -v -R --parallel=10 --exclude .git/ --exclude node_modules/ --exclude CHANGELOG.md --exclude CODE_OF_CONDUCT.md --exclude composer.json --exclude composer.lock --exclude package.json --exclude yarn.lock ./themes/${theme} domains/${site_name}/public_html/wp-content/themes/${theme};' quit";
