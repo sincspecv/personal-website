@@ -1,6 +1,6 @@
 version: 2.0
 jobs:
-  build_staging:
+  build:
     machine:
       image: circleci/classic:latest
     branches:
@@ -20,4 +20,4 @@ jobs:
             composer install;
             cd themes/${theme};
             composer install;
-            lftp sftp://${username}:${password}@${hostname} -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ domains/${site_name}/public_html/wp-content/themes/${theme}; quit";
+            lftp sftp://${username}:${password}@${hostname}:${port} -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ domains/${site_name}/public_html/wp-content/themes/${theme}; quit";
