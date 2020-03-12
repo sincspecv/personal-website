@@ -1,0 +1,10 @@
+.fifty-fifty-form {
+  .fluentform .ff-btn {
+    font-size: $large;
+    border-color: transparent;
+
+    &:hover {
+      background-color: darken($primary, 2.5);
+    }
+  }
+}

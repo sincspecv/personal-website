@@ -71,6 +71,7 @@ class Bootstrap {
 				Layouts\Partners::class,
 				Layouts\Content::class,
 				Layouts\FiiftyFifty::class,
+				Layouts\FiiftyFiftyForm::class,
 				Layouts\NumberedSequence::class,
 			];
 		});
