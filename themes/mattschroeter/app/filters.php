@@ -99,9 +99,9 @@ add_filter('acf/settings/row_index_offset', '__return_zero');
  * Add hero body class if hero module is used
  */
 add_filter('body_class', function($classes) {
-    $post_id = get_the_ID();
+    $post_id = \get_the_ID();
 
-    $fields  = get_fields($post_id);
+    $fields  = \get_fields($post_id);
     $modules = $fields[get_post_type() . '_modules'];
 
     if(!empty($modules)) {
