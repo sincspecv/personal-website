@@ -8,7 +8,6 @@ export default {
      */
 
     const toggleTransparentClass = (element, height) => {
-
       if(element.classList.contains('transparent') && window.pageYOffset > height) {
         element.classList.remove('transparent')
       } else if(!element.classList.contains('transparent') && window.pageYOffset <= height) {
@@ -16,24 +15,22 @@ export default {
       }
     };
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const nav = document.querySelector('.banner');
-      const hero = document.querySelector('.hero');
-      let heroHeight = hero.clientHeight;
-      
-      if(document.body.classList.contains('has-hero')) {
+    const nav = document.querySelector('.banner');
+    const hero = document.querySelector('.hero');
+    let heroHeight = hero.clientHeight;
+
+    if(document.body.classList.contains('has-hero')) {
+      toggleTransparentClass(nav, heroHeight)
+
+      window.addEventListener('scroll', () => {
         toggleTransparentClass(nav, heroHeight)
+      });
 
-        window.addEventListener('scroll', () => {
-          toggleTransparentClass(nav, heroHeight)
-        });
-
-        window.addEventListener('resize', () => {
-          heroHeight = hero.clientHeight;
-          toggleTransparentClass(nav, heroHeight)
-        });
-      }
-    });
+      window.addEventListener('resize', () => {
+        heroHeight = hero.clientHeight;
+        toggleTransparentClass(nav, heroHeight)
+      });
+    }
 
     /**
      * Mobile nav
