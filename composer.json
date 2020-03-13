@@ -38,7 +38,7 @@
   "require": {
     "wpackagist-plugin/autodescription": "dev-trunk",
     "wpackagist-plugin/fluentform": "3.2.4",
-    "sincspecv/wp-acf-to-post": "0.1.0",
+    "sincspecv/wp-acf-to-post": "0.1.1",
     "sincspecv/acf-pro": "5.8.7",
     "littlebizzy/speed-demon": "1.4.0"
   }
