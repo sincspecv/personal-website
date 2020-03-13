@@ -11,7 +11,7 @@ class Partners extends Layout {
 	public function __construct() {
 		parent::__construct();
 
-		$this->setName( 'Partners' );
+		$this->setName( 'partners' );
 		$this->setLabel( __( 'Partners', 'tfr' ) );
 		$this->setRepeaters( ['modules'] );
 	}

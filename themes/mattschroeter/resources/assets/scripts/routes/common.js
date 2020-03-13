@@ -17,7 +17,7 @@ export default {
 
     const nav = document.querySelector('.banner');
     const hero = document.querySelector('.hero');
-    let heroHeight = hero.clientHeight;
+    let heroHeight = hero.clientHeight * 0.25;
 
     if(document.body.classList.contains('has-hero')) {
       toggleTransparentClass(nav, heroHeight)
@@ -27,7 +27,7 @@ export default {
       });
 
       window.addEventListener('resize', () => {
-        heroHeight = hero.clientHeight;
+        heroHeight = hero.clientHeight * 0.25;
         toggleTransparentClass(nav, heroHeight)
       });
     }
