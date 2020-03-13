@@ -12,13 +12,14 @@ export default {
     const toggleTransparentClass = () => {
       let heroHeight = hero.clientHeight;
       let height = heroHeight * 0.25;
+      console.log(height);
 
       if(nav.classList.contains('transparent') && window.pageYOffset > height) {
         nav.classList.remove('transparent')
       } else if(!nav.classList.contains('transparent') && window.pageYOffset <= height) {
         nav.classList.add('transparent')
       }
-    }
+    };
 
     window.addEventListener('DOMContentLoaded', () => {
       if(document.body.classList.contains('has-hero')) {
@@ -32,7 +33,7 @@ export default {
           toggleTransparentClass()
         });
       }
-    })
+    });
 
     /**
      * Mobile nav
