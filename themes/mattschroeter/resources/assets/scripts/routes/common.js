@@ -6,31 +6,31 @@ export default {
     /**
      * Toggle banner transparency class
      */
-    const nav = document.querySelector('.banner');
-    const hero = document.querySelector('.hero');
 
-    const toggleTransparentClass = () => {
-      let heroHeight = hero.clientHeight;
-      let height = heroHeight * 0.25;
-      console.log(height);
+    const toggleTransparentClass = (element, height) => {
 
-      if(nav.classList.contains('transparent') && window.pageYOffset > height) {
-        nav.classList.remove('transparent')
-      } else if(!nav.classList.contains('transparent') && window.pageYOffset <= height) {
-        nav.classList.add('transparent')
+      if(element.classList.contains('transparent') && window.pageYOffset > height) {
+        element.classList.remove('transparent')
+      } else if(!element.classList.contains('transparent') && window.pageYOffset <= height) {
+        element.classList.add('transparent')
       }
     };
 
     window.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('.banner');
+      const hero = document.querySelector('.hero');
+      let heroHeight = hero.clientHeight;
+      
       if(document.body.classList.contains('has-hero')) {
-        toggleTransparentClass()
+        toggleTransparentClass(nav, heroHeight)
 
         window.addEventListener('scroll', () => {
-          toggleTransparentClass()
+          toggleTransparentClass(nav, heroHeight)
         });
 
         window.addEventListener('resize', () => {
-          toggleTransparentClass()
+          heroHeight = hero.clientHeight;
+          toggleTransparentClass(nav, heroHeight)
         });
       }
     });

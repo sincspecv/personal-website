@@ -65,6 +65,12 @@
   }
 
   @media screen and (max-width: 768px) {
-    max-height: 400px;
+    min-height: 400px;
+    animation: HeroGradient 25s ease infinite;
+  }
+
+  @media screen and (max-width: 480px) {
+    background-size: 600% 200%;
+    animation: HeroGradient 15s ease infinite;
   }
 }
